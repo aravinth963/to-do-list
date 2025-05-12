@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0f0f0, #d9d9d9);
+    padding: 10px;
+}
+
+.to-do-app {
+    width: 100%;
+    max-width: 540px;
+    background: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    background: #f9f9f9;
+    border-radius: 30px;
+    padding-left: 20px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+button {
+    padding: 16px 50px;
+    background: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    position: relative;
+    cursor: pointer;
+}
+
+li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+}
+
+li:hover span {
+    background: #e74c3c;
+    color: white;
+}
+
+li.checked {
+    text-decoration: line-through;
+    color: gray;
+}
+
+li.checked::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    width: 28px;
+    height: 28px;
+    background: url('./images/vecteezy_check-mark-icon_15130843.png') no-repeat center center;
+    background-size: cover;
+}
+
+li::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    width: 28px;
+    height: 28px;
+    background: url('./images/remove.png') no-repeat center center;
+    background-size: cover;
+}
+
+@media (max-width: 600px) {
+    .to-do-app {
+        padding: 20px 15px 50px;
+    }
+
+    button {
+        padding: 12px 20px;
+    }
+}
